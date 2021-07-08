@@ -7,6 +7,7 @@ const Deck = require('../src/Deck');
 const Turn = require('../src/Turn');
 
 describe('Round', () => {
+  //-----------test set-up
   let card1;
   let card2;
   let card3;
@@ -15,10 +16,26 @@ describe('Round', () => {
   let round;
   let correctGuess;
   let incorrectGuess;
+  const guess = 'guessInputString';
   before(() => {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(14, 'Which iteration method can turn an array into a single value of any data type?', ['reduce()', 'map()', 'filter()'], 'reduce()');
-    card3 = new Card(12, 'Which iteration method returns an array of the same length as the original array?', ["map()", "forEach()", "reduce()"], 'map()');
+    card1 = new Card(
+      1, 
+      'What allows you to define a set of related information using key-value pairs?', 
+      ['object', 'array', 'function'], 
+      'object'
+    );
+    card2 = new Card(
+      14, 
+      'Which iteration method can turn an array into a single value of any data type?', 
+      ['reduce()', 'map()', 'filter()'], 
+      'reduce()'
+    );
+    card3 = new Card(
+      12, 
+      'Which iteration method returns an array of the same length as the original array?', 
+      ["map()", "forEach()", "reduce()"], 
+      'map()'
+    );
     deck = new Deck([card1, card2, card3]);
     cards = deck.cards;
     correctGuess = 'object';
@@ -37,33 +54,24 @@ describe('Round', () => {
     expect(round).to.be.an.instanceof(Round);
   }); 
 
-  it('should store a deck', () => {
-    expect(round.deck).to.equal(cards);
+  //-----------default property tests
+  it('should store given cards', () => {
+    expect(round.cards).to.equal(cards);
   });
 
-  it('should default to having 0 turns', () => {
+  it('should default turns to 0', () => {
     expect(round.turns).to.equal(0);
   });
 
-  it('should store a current card', () => {
+  it('should store the current Card object', () => {
     expect(round.currentCard).to.equal(card1);
   });
 
-  it('should default incorrect guesses as empty', () => {
+  it('should default incorrect guesses to an empty array', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
-
   });
 
-  it('should store incorrect guesses', () => {
-    round.takeTurn(incorrectGuess);
-  
-    expect(round.incorrectGuesses).to.deep.equal([1]);
-    
-    round.takeTurn(round.currentCard.correctAnswer);
-
-    expect(round.incorrectGuesses).to.deep.equal([1]);
-  });
-
+  //-----------returnCurrentCard() tests
   it('should return the current card', () => {
     const currentCard = round.returnCurrentCard();
 
@@ -76,29 +84,47 @@ describe('Round', () => {
     expect(currentCard2).to.equal(round.currentCard);
   })
 
-
-  it('should be able to return a new instance of turn when a guess is made', () => {
-    round.takeTurn(incorrectGuess);
+  //-----------takeTurn(guess) tests
+  it('should be able to store current turn when given guess', () => {
+    round.takeTurn(guess);
     
     expect(round.currentTurn).to.be.an.instanceof(Turn);
   });
 
-  it('should create a new instance of turn passing in a guess as an argument', () => {
-    round.takeTurn(incorrectGuess);
+  it('should create a new instance of turn with given guess', () => {
+    round.takeTurn(guess);
 
-    expect(round.currentTurn.guess).to.equal(incorrectGuess);
+    expect(round.currentTurn.guess).to.equal(guess);
   });
 
-  it('should increment turns after a turn is taken', () => {
+  it('should store the incorrect guesses by id', () => {
     round.takeTurn(incorrectGuess);
+  
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+      
+    round.takeTurn(round.currentCard.correctAnswer);
+  
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+  })
+
+  it('should increment turns after a turn is taken', () => {
+    round.takeTurn(guess);
    
     expect(round.turns).to.equal(1);
+
+    round.takeTurn(guess);
+
+    expect(round.turns).to.equal(2);
   });
 
   it('should update the current card after a turn is taken', () => {
-    round.takeTurn(incorrectGuess);
+    round.takeTurn(guess);
 
     expect(round.currentCard).to.equal(card2);
+
+    round.takeTurn(guess);
+
+    expect(round.currentCard).to.equal(card3);
   });
 
   it('should provide feedback regarding whether the guess is correct or incorrect', () => {
@@ -110,14 +136,9 @@ describe('Round', () => {
 
     expect(feedback2).to.equal('incorrect!')
   })
-
-  it('should store incorrect guesses by id', () => {
-    round.takeTurn(incorrectGuess);
- 
-    expect(round.incorrectGuesses).to.include(1);
-  })
-
-  it('should return percent of correct guesses', () => {
+  
+  //-----------calculatePercentCorrect() tests
+  it('should return the percentage of correct guesses', () => {
     round.takeTurn(correctGuess);
     
     let percentCorrect = round.calculatePercentCorrect();
@@ -132,22 +153,4 @@ describe('Round', () => {
     expect(percentCorrect).to.equal(33);
   });
 
-  it('should print message when round is over with percentage correct', () => {
-
-    // round.turns = 27;
-
-    // round.takeTurn(incorrectGuess);
-    // round.takeTurn(incorrectGuess);
-
-    // const message = endRound()
-
-    // beforeEach(function() {
-    //   this.sinon.stub(console, 'log');
-    // });
-
-    expect(console.log.calledWith(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly!`)).to.be.true;
-
-    // const message = endRound()
-
-  })
 })

@@ -6,13 +6,10 @@ const util = require('./util');
 
 class Game {
   constructor() {
-    // this.currentRound;
-    /*
-    game.currentRound; // => Round {...} (The new Round object that has been instatiated)
-    */
+    this.currentRound = null;
   }
 
-  printMessage(deck, round) {
+  printMessage(deck) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
@@ -21,16 +18,13 @@ class Game {
       util.main(round);
   }
 
-  //can/does this need to be async?
   start() {
-    //create cards
-    //will put cards in a deck
-    //will invoke the print and printQuestion
     const deck = new Deck(prototypeQuestions);
-    const round = new Round(deck.cards);
-    this.printMessage(deck, round);
-    this.printQuestion(round);
+    this.currentRound = new Round(deck.cards);
+    this.printMessage(deck, this.currentRound);
+    this.printQuestion(this.currentRound);
   }
+  
 }
 
 module.exports = Game;
