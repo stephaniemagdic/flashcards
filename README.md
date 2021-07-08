@@ -51,7 +51,7 @@ To exit node on a mac, choose `cntrl + c`!
 * **Command Node index.js:**  
   * xx 
 
-![firstgif](https://i.ibb.co/5h0r4V0/flashcards.gif)
+[firstgif](https://i.ibb.co/5h0r4V0/flashcards.gif)
 
 * **Make a Guess:**  
   * Choose an (index number) and press enter to select your guess!
