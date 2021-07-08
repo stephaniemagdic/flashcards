@@ -29,7 +29,7 @@ describe(Game, () => {
   it('should set current round to an instance of Round that holds prototype data as its deck of cards', () => {
     game.start();
 
-    expect(game.currentRound).to.be.an.instanceof(Round)
+    expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
 })
