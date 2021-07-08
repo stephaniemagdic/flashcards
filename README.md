@@ -1,13 +1,12 @@
 # FlashCards 
 
-#### [Week 7 Project Spec](https://frontend.turing.edu/projects/flash-cards.html)
+#### [Project Spec](https://frontend.turing.edu/projects/flash-cards.html)
 
 ##### Week 7 (Mod2) at Turing School of Software and Design
 
 ## Project Description
 
-Use your command line to simulate a set of flashcards to practice your knowledge of array prototype methods: itterators!  A user will be able to see the questions in the terminal, take guesses, and see a final score at the end of the round!
- * Implements Mocha test framework and Chai TDD assertion library, which includes hooks to create dry tests.
+Use your command line to simulate a set of flashcards to practice your knowledge of array prototype methods: itterators!  A user will be able to see the questions in the terminal, take guesses, and see a final score at the end of the round! 
  
 ### Built-By:
 
@@ -19,24 +18,18 @@ Use your command line to simulate a set of flashcards to practice your knowledge
 * JavaScript (ECMAScript 2009)
 * Node
 * NPM packages/dependencies: [Inquirer](https://www.npmjs.com/package/inquirer)
+* Mocha test framework and Chai TDD assertion library
 
 
 ### Architecture
 
 * src directory
-  * Card.js: 
-    * holds all WinningBoardSets (arrays with list of ids that equate to a win)
-  * Deck.js 
-    * 
-  * Game.js 
-    * 
-  * Round.js
-  * Turn.js
+  * Class files.
   * Util.js
-    * x
+    * Holds the logic that will capture the user input in the console through Inquirer.js command line interface.
 * test directory
-  * x
 * data.js
+ * Holds our flashcard data that we will use to build our flashcards through the command line.
 * index.js
 * README.md
 
@@ -48,35 +41,25 @@ You can access the game by `cloning this repository`, navigating to and `opening
 Make sure to run `npm install` in your terminal after cloning the repository to install dependencies needed for the flashcards to run.
 To exit node on a mac, choose `cntrl + c`!
 
-* **Command Node index.js:**  
-  * xx 
-
+* **Start the Game:**  
+ * Use the command `node index.js` to start the game! You will see a welcome message and your first flashcard!
+  
 ![firstgif](https://i.ibb.co/nL069gm/flashcards-start.gif)
 
 * **Make a Guess:**  
-  * Choose an (index number) and press enter to select your guess!
-  * Choose enter key on your keyboard!
-  * You will see either the message `` or ``. 
+  * Choose an (index number) answer and press enter to confirm your guess!
+  * You will see either the message message that your answer is correct or incorrect.
 
-* **Guess the next card & Repeat!:** 
-  * xx
+* **Repeat!:** 
+  * Go back and make a guess and choose enter until you finish the deck! 
 
 ![firstgif](https://i.ibb.co/cJfHBfJ/flashcards-finish.gif)
 
-
-* **Guess the next card & Repeat!:** 
-  * xx
-
-![firstgif]()
-
-* **Finish the Round:**  
-  * XXX 
+* **View your score!:**  
+  * After you finish all 30 flashcards, your final score will appear.
+  * Exit node with `cntrl + c`.
+  * Repeat the process by running `node index.js once more`!
  
- 
-![]()
-  
-
-
 
 ### Project Challenges 
  * x
