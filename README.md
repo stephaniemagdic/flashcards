@@ -1,8 +1,5 @@
 # FlashCards 
 
-
-# Week 7 Project Spec
-
 #### [Week 7 Project Spec](https://frontend.turing.edu/projects/flash-cards.html)
 
 ##### Week 7 (Mod2) at Turing School of Software and Design
@@ -46,7 +43,7 @@ Use your command line to simulate a set of flashcards to practice your knowledge
 
 ## Instructions for running and viewing
 
-You can access the game by `cloning this repository`, navigating to and `opening your terminal` and running the command `node index.js` to run the index.js file, which will start display the first flashcard.
+You can access the game by `cloning this repository`, navigating to and `opening your terminal`, and running the command `node index.js` in your cloned project directory. This will run the index.js file, which will start display the first flashcard.
 
 Make sure to run `npm install` in your terminal after cloning the repository to install dependencies needed for the flashcards to run.
 To exit node on a mac, choose `cntrl + c`!
@@ -54,7 +51,7 @@ To exit node on a mac, choose `cntrl + c`!
 * **Command Node index.js:**  
   * xx 
 
-![firstgif]()
+![firstgif](https://i.ibb.co/5h0r4V0/flashcards.gif)
 
 * **Make a Guess:**  
   * Choose an (index number) and press enter to select your guess!
