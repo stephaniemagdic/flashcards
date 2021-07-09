@@ -8,15 +8,8 @@ const Turn = require('../src/Turn');
 
 describe('Round', () => {
   //-----------test set-up
-  let card1;
-  let card2;
-  let card3;
-  let deck;
-  let cards;
-  let round;
-  let correctGuess;
-  let incorrectGuess;
-  const guess = 'guessInputString';
+  let card1, card2, card3, deck, cards, round, correctGuess, incorrectGuess, guess; 
+
   before(() => {
     card1 = new Card(
       1, 
@@ -40,17 +33,18 @@ describe('Round', () => {
     cards = deck.cards;
     correctGuess = 'object';
     incorrectGuess = 'array';
+    guess = 'guessInputString';
   });
 
   beforeEach(() => {
     round = new Round(cards);
   });
 
-  it('should be a function', function() {
+  it('should be a function', () => {
     expect(Round).to.be.a('function');
   });
 
-  it('should be an instance of Round', function() {
+  it('should be an instance of Round', () => {
     expect(round).to.be.an.instanceof(Round);
   }); 
 

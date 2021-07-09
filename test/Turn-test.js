@@ -6,12 +6,7 @@ const Card = require('../src/Card');
 
 describe('Turn', () => {
   //-----------test set-up
-  let card;
-  let card2;
-  let correctGuess;
-  let incorrectGuess;
-  const guess = 'guessInputString';
-  const anotherGuess = 'guessInputString2';
+  let card, card2, correctGuess, incorrectGuess, guess, anotherGuess;
 
   before(() => {
     card = new Card(
@@ -27,15 +22,16 @@ describe('Turn', () => {
     );
     correctGuess = 'object';
     incorrectGuess = 'array';
-    correctGuess = 'object';
-    incorrectGuess = 'array';
+    guess = 'guessInputString';
+    anotherGuess = 'guessInputString2';
+   
   });
 
   it('should be a function', () => {
     expect(Turn).to.be.a('function');
   });
 
-  it('should be an instance of Turn', function() {
+  it('should be an instance of Turn', () => {
     const turn = new Turn();
     expect(turn).to.be.an.instanceof(Turn);
   }); 
@@ -84,7 +80,6 @@ describe('Turn', () => {
     const turn = new Turn(correctGuess, card);
     const turn2 = new Turn(incorrectGuess, card);
 
-    //change evaluatedGuess to evaluatedGuess1
     const evaluatedGuess = turn.evaluateGuess();
 
     const evaluatedGuess2 = turn2.evaluateGuess();
@@ -92,7 +87,7 @@ describe('Turn', () => {
     expect(evaluatedGuess).to.equal(true);
 
     expect(evaluatedGuess2).to.equal(false);
-  })
+  });
 
   //-----------giveFeedback() tests
   it('should give feedback if guess is correct or incorrect', () => {
