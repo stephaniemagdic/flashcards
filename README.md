@@ -49,7 +49,7 @@ To exit node on a mac, choose `cntrl + c`!
   * You will see a message displayed that will inform you if you answered correctly or incorrectly.
 
 * **Repeat!:** 
-  * Repeat this process by reading the next process, (googling some documentation to help you find your answer) and take a guess until you go through each card in the deck.
+  * Repeat this process by reading the next question, (googling some documentation to help you find your answer) and taking a guess until you go through each card in the deck.
 
 ![firstgif](https://i.ibb.co/cJfHBfJ/flashcards-finish.gif)
 
