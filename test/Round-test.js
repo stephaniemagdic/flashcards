@@ -65,6 +65,10 @@ describe('Round', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
+  it('should default current turn to null', () => {
+    expect(round.currentTurn).to.equal(null);
+  });
+
   //-----------returnCurrentCard() tests
   it('should return the current card', () => {
     const currentCard = round.returnCurrentCard();
