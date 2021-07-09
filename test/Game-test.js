@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Game = require('../src/Game');
 const Round = require('../src/Round');
 
-describe(Game, () => {
+describe('Game', () => {
   //-----------test set-up
   let game;
 
