@@ -15,15 +15,14 @@ class Round {
 
   takeTurn(guess) {
     this.currentTurn = new Turn(guess, this.currentCard);
-    const feedback = this.currentTurn.giveFeedback();
 
-    if (feedback === 'incorrect!') {
+    if (!this.currentTurn.evaluateGuess()) {
       this.incorrectGuesses.push(this.currentCard.id);
     }
 
     this.turns += 1;
     this.currentCard = this.cards[this.turns];
-    return feedback;
+    return this.currentTurn.giveFeedback();
   }
 
   calculatePercentCorrect() {
