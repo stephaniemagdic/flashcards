@@ -4,22 +4,20 @@ const expect = chai.expect;
 const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
-describe('Turn', function() {
+describe('Turn', () => {
   //-----------test set-up
   let card;
-  //change to correct/inncorrect guess for readability
-  //guess1 is correct guess...
-  let guess1;
-  let guess2;
-  //put turn 1 and 2 here...
+  let correctGuess;
+  let incorrectGuess;
+  const guess = 'guessInputString';
 
   before(() => {
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    guess1 = 'object';
-    guess2 = 'array';
+    correctGuess = 'object';
+    incorrectGuess = 'array';
   });
 
-  it('should be a function', function() {
+  it('should be a function', () => {
     expect(Turn).to.be.a('function');
   });
 
@@ -30,33 +28,33 @@ describe('Turn', function() {
 
   //-----------default property tests
   //should store given guess.
-  it('should store a guess', function() {
-    const turn = new Turn(guess1);
-    expect(turn.guess).to.equal(guess1);
+  it('should store a given guess', () => {
+    const turn = new Turn(guess);
+    expect(turn.guess).to.equal(guess);
 
-    const turn2 = new Turn('array');
-    expect(turn2.guess).to.equal('array');
+    const turn2 = new Turn(guess);
+    expect(turn2.guess).to.equal(guess);
   });  
 
   //should store given card
   it('should store a card', () => {
-    const turn = new Turn(guess1, card);
+    const turn = new Turn(guess, card);
 
     expect(turn.card).to.equal(card);
   });
 
   //-----------returnGuess() tests
   it('should return guess', () => {
-    const turn = new Turn(guess1, card);
+    const turn = new Turn(guess, card);
 
     const returnedGuess = turn.returnGuess();
 
-    expect(returnedGuess).to.equal(guess1);
+    expect(returnedGuess).to.equal(guess);
   });
 
   //-----------returnCard() tests
   it('should return card', () => {
-    const turn = new Turn(guess1, card);
+    const turn = new Turn(guess, card);
 
     const returnedCard = turn.returnCard();
 
@@ -65,8 +63,8 @@ describe('Turn', function() {
 
   //-----------evaluateGuess() tests
   it('should evalutate guess to true or false', () => {
-    const turn = new Turn(guess1, card);
-    const turn2 = new Turn(guess2, card);
+    const turn = new Turn(correctGuess, card);
+    const turn2 = new Turn(incorrectGuess, card);
 
     //change evaluatedGuess to evaluatedGuess1
     const evaluatedGuess = turn.evaluateGuess();
@@ -80,13 +78,13 @@ describe('Turn', function() {
 
   //-----------giveFeedback() tests
   it('should give feedback if guess is correct or incorrect', () => {
-    const turn = new Turn(guess1, card);
+    const turn = new Turn(correctGuess, card);
 
     const feedback = turn.giveFeedback();
 
     expect(feedback).to.equal('correct!');
 
-    const turn2 = new Turn(guess2, card);
+    const turn2 = new Turn(incorrectGuess, card);
 
     const feedback2 = turn2.giveFeedback();
 
