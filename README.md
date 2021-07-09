@@ -51,7 +51,7 @@ To exit node on a mac, choose `cntrl + c`!
 * **Repeat!:** 
   * Repeat this process by reading the next question, (googling some documentation to help you find your answer) and taking a guess until you go through each card in the deck.
 
-![Finish Game](https://i.ibb.co/qmSxVZm/flashcards2.gif)
+![Finish Game](https://i.ibb.co/cJfHBfJ/flashcards-finish.gif
 
 * **View your score!:**  
   * After you finish all 30 flashcards, your final score as a percentage will appear.
