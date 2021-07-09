@@ -7,12 +7,26 @@ const Card = require('../src/Card');
 describe('Turn', () => {
   //-----------test set-up
   let card;
+  let card2;
   let correctGuess;
   let incorrectGuess;
   const guess = 'guessInputString';
+  const anotherGuess = 'guessInputString2';
 
   before(() => {
-    card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    card = new Card(
+      1, 
+      'What allows you to define a set of related information using key-value pairs?', 
+      ['object', 'array', 'function'], 'object'
+    );
+    card2 = new Card(
+      14, 
+      'Which iteration method can turn an array into a single value of any data type?', 
+      ['reduce()', 'map()', 'filter()'], 
+      'reduce()'
+    );
+    correctGuess = 'object';
+    incorrectGuess = 'array';
     correctGuess = 'object';
     incorrectGuess = 'array';
   });
@@ -28,12 +42,12 @@ describe('Turn', () => {
 
   //-----------default property tests
   //should store given guess.
-  it('should store a given guess', () => {
+  it('should store a guess', () => {
     const turn = new Turn(guess);
     expect(turn.guess).to.equal(guess);
 
-    const turn2 = new Turn(guess);
-    expect(turn2.guess).to.equal(guess);
+    const turn2 = new Turn(anotherGuess);
+    expect(turn2.guess).to.equal(anotherGuess);
   });  
 
   //should store given card
@@ -41,6 +55,10 @@ describe('Turn', () => {
     const turn = new Turn(guess, card);
 
     expect(turn.card).to.equal(card);
+
+    const turn2 = new Turn(guess, card2);
+
+    expect(turn2.card).to.equal(card2);
   });
 
   //-----------returnGuess() tests
