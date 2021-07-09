@@ -25,7 +25,7 @@ Use your command line to simulate a set of flashcards to practice your knowledge
 
 * src directory
   * ES6 class files
-  * Util.js: Holds the logic that will capture the user input in the console through Inquirer.js command line interface.
+  * Util.js: Holds the logic that will capture the user input in the console through Inquirer.js command line interface
 * test directory
 * data.js: holds the data that will populate the flashcard deck
 * index.js: our respository entry point which will start the server and invoke the start method on the game class, showing us our first flashcard
