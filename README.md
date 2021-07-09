@@ -46,7 +46,7 @@ To exit node on a mac, choose `cntrl + c`!
 
 * **Make a Guess:**  
   * Choose an answer (index number) and press enter to confirm your guess!
-  * You will see either the message displayed that will inform you if you answered correctly or incorrectly.
+  * You will see a message displayed that will inform you if you answered correctly or incorrectly.
 
 * **Repeat!:** 
   * Repeat this process by reading the next process, (googling some documentation to help you find your answer) and take a guess until you go through each card in the deck.
