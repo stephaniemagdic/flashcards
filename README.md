@@ -42,7 +42,7 @@ To exit node on a mac, choose `cntrl + c`!
 * **Start the Game:**  
  * Use the command `node index.js` to start the game! You will see a welcome message and your first flashcard!
   
-![firstgif](https://i.ibb.co/nL069gm/flashcards-start.gif)
+![Start Game](https://i.ibb.co/nL069gm/flashcards-start.gif)
 
 * **Make a Guess:**  
   * Choose an answer (index number) and press enter to confirm your guess!
@@ -51,7 +51,7 @@ To exit node on a mac, choose `cntrl + c`!
 * **Repeat!:** 
   * Repeat this process by reading the next question, (googling some documentation to help you find your answer) and taking a guess until you go through each card in the deck.
 
-![firstgif](https://i.ibb.co/zHzQsKm/finish-flashcards.gif)
+![Finish Game](https://i.ibb.co/qmSxVZm/flashcards2.gif)
 
 * **View your score!:**  
   * After you finish all 30 flashcards, your final score as a percentage will appear.
