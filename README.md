@@ -60,9 +60,9 @@ To exit node on a mac, choose `cntrl + c`!
  
 
 ### Project Challenges 
- * Towards the end of the project, I ran into an error with NPM that would not allow me to run my last test. There isn't an abundance of documentation on this error and cannot be debugged easily without uninstalling and reinstalling node, but it is a helpful issue to run into when working with node as it can throw some unexpected errors. 
- * I learn so much from classmates, but spend a lot of time collaborating to help others which took me away from working on extensions, but I would also absolutely put this in the win category as well, because collaboration and community is very important and we all learn by helping eachother out. Go possums. <3
+ * Towards the end of the project, I ran into an error with npm that would not allow me to run my last test. There isn't an abundance of documentation on this error and cannot be debugged easily without uninstalling and reinstalling node, but it is a helpful issue to run into as node can throw some unexpected errors. I have learned to run npm install to fix issues and dig when I find those error messages.
+ * I learn so much from classmates, but spent a lot of time collaborating to help others which took me away from working on extensions. However I would absolutely put this in the win category as well, because collaboration and community are very important and we all learn by helping eachother out. Plus it's more fun that way. `Go possums. <3`
  
 ### Project Wins
- * I learned about inquirer and starting to simulate waiting to fetch data from a user through the CLI API. This will help with our next project where we will be working with fetch requests.
- * Because I looked at this project early, I was really able to spend a more significant amount of time helping others to debug their code, especially during the curnch time as the deadline approached.. 
+ * I learned about Inquirer and worked with a project that simulated using data recieved from the user through the CLI API to work with asynchronous JavaScript. This will help with our next project where we will be working with fetch requests and a web API.
+ * Because I looked at this project early, I was really able to spend a more significant amount of time helping others to debug their code, especially during crunch time as the deadline approached.
