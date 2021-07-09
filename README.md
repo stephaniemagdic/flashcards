@@ -60,7 +60,7 @@ To exit node on a mac, choose `cntrl + c`!
  
 
 ### Project Challenges 
- * Towards the end of the project, I ran into an error with npm that would not allow me to run my last test. There isn't an abundance of documentation on this error and cannot be debugged easily without uninstalling and reinstalling node, but it is a helpful issue to run into as node can throw some unexpected errors. I have learned to run npm install to fix issues and dig when I find those error messages.
+ * Towards the end of the project, I ran into a simple syntax type error that would not allow me to run my last test. (Oh Javascript type errors!) It had given me a strange error that led me to believe that it was a problem with an npm package. I had deleted and reinstalled my node modules, ran my code in another text editor on another computer, and even had a friend clone down my repo. Turns out it was a type error without a very clear error message! This was helpful to run into and a reminder that syntax type errors could cause major problems. I figured it out by commenting out the code in the entire test file and working line by line backwards to until I came across the type error that was breaking my code! 
  * I learn so much from classmates, but spent a lot of time collaborating to help others which took me away from working on extensions. However I would absolutely put this in the win category as well, because collaboration and community are very important and we all learn by helping eachother out. Plus it's more fun that way. `Go possums. <3`
  
 ### Project Wins
