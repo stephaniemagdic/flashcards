@@ -31,8 +31,6 @@ describe('Deck', function() {
       ["map()", "forEach()", "reduce()"], 
       'map()'
     );
-    // deck = new Deck([card1, card2, card3]);
-    // cards = deck.cards;
     cards = ([card1, card2, card3]);
     deck = new Deck([card1, card2, card3]);
   });
